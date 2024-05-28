@@ -1,0 +1,22 @@
+<!-- Store this code in 'index.html' file inside the 'templates' folder-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Thank you for login!!! </title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="" method="">
+            <h1 style=text-align:center> Thank you for login!!!  </h1>
+            <div class="bottom">
+                <p>Hi {{msg}},  Welcome to Home Page <a href="{{ url_for('auth_bp.logout') }}">Logout</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
