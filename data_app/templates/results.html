@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CP Calculation Results</title>
+    
+    
+</head>
+<body>
+    <h1>CP Calculation Results</h1>
+    <p>Maximum_Cp Value: {{maximum_Cp}}
+    <p>Rho value: {{ rho }}</p>
+
+    <!-- Display the plot image with specific attributes -->
+    <div>
+        <img src="{{ url_for('data_app.plot', filename=plot_filename) }}" alt="CP Values Plot" width="800" height="600">
+    </div>
+    
+    <!-- Download links for the plot and the calculated data -->
+    <div>
+        <a href="{{ url_for('data_app.download_plot', filename=plot_filename) }}" download="plot.png">Download Plot</a>
+        <br><br>
+        <a href="{{ url_for('data_app.download_files', filename=output_filename) }}" download="output.xlsx">Download Calculated Data</a>
+    </div>
+      <p><a href="{{ url_for('auth_bp.logout') }}">Logout</a></p>
+</body>
+</html>
